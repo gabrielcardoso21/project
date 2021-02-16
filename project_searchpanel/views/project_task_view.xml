@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_task_kanban" model="ir.ui.view">
+            <field name="name">project.task.kanban in project_searchpanel</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//templates" position="after">
+                    <searchpanel>
+                        <field name="type_id" select="multi"/>
+                    </searchpanel>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
